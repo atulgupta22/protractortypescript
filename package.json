@@ -1,0 +1,41 @@
+{
+  "name": "protractor_typescript",
+  "version": "1.0.0",
+  "description": "Package.json file for my Project",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "webdriver-manager-update": "webdriver-manager update --versions.chrome 84.0.4147.30",
+    "webdriver-manager-start" :"webdriver-manager start",
+    "pretest": "npm run tsc",
+    "test": "protractor outputjs/conf.js",
+    "posttest": "allure generate allure-results --clean -o allure-report"
+  },
+  "author": "Atul Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.5.11",
+    "@types/jquery": "3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "~12.12.2",
+    "allure-commandline": "^2.13.0",
+    "allure-jasmine": "2.0.0-beta.7",
+    "jasmine": "3.5.0",
+    "jasmine-allure-reporter": "1.0.2",
+    "log4js": "6.3.0",
+    "protractor": "7.0.0",
+    "protractor-jasmine2-html-reporter": "0.0.7",
+    "protractor-beautiful-reporter": "1.3.6",
+    "chercher-tech-jasmine-reporter": "1.0.5",
+    "typescript": "~3.4.3",
+    "xmlhttprequest": "1.8.0",
+    "selenium-webdriver": "4.0.0-alpha.7",
+    "webdriver-manager": "12.1.7"
+  },
+  "preferGlobal": false,
+  "bin": {
+    "protractor": "bin/protractor",
+    "webdriver-manager": "bin/webdriver-manager"
+  }
+}
